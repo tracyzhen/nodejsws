@@ -1,3 +1,10 @@
+<!DOCTYPE>
+    <html>
+<head>
+    <meta charset="utf8">
+    <title>PHP测试</title>
+</head>
+<body>
 <?php
 /**
  * Created by JetBrains PhpStorm.
@@ -7,3 +14,6 @@
  * To change this template use File | Settings | File Templates.
  */
 echo 'This is a php file';
+?>
+</body>
+</html>

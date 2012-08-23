@@ -21,11 +21,9 @@ http.createServer(function (req, res) {
     if (util.endsWith(req_path, 'ico')) {
         resource_type = 'image';
         res.writeHead(200, {'Content-Type':'binary'});
-    } else {
-        res.writeHead(200, {'Content-Type':'text/html', 'charset': 'utf8'});
     }
+
     var req_method = req.method;
-//    if(req_method == 'GET') {
 
     for(var suffix in config.server_config.PLUGINS) {
         var command = config.server_config.PLUGINS[suffix];
@@ -37,19 +35,7 @@ http.createServer(function (req, res) {
             return;
         }
     }
-//    if (util.endsWith(req_path, 'php')) {
-//        child_process.execFile('D:\\Program Files\\PHP\\php.exe ', [req_path, ], function (err, data) {
-//            res.write(data);
-//            res.end();
-//        });
-//        return;
-//    } else if(util.endsWith(req_path, 'js')) {
-//        child_process.execFile('node', [req_path, ], function(err, data) {
-//            res.write(data);
-//            res.end();
-//        });
-//        return;
-//    }
+
     fs.readFile(req_path, function (err, data) {
         if (err) {
             console.log(err);
@@ -59,5 +45,4 @@ http.createServer(function (req, res) {
         res.write(data);
         res.end();
     });
-//    }
 }).listen(8080);
