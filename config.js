@@ -9,6 +9,9 @@
 exports.server_config = {
     ROOT_DIR:'.',
     PLUGINS: {
-        'php': 'php' // the suffix and the executable command
+        'php': 'php', // the suffix and the executable command
+        'py': 'python',
+        'rb': 'ruby'
+//        'js': 'node'
     }
 };
