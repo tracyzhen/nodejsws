@@ -29,6 +29,7 @@ http.createServer(function (req, res) {
         var command = config.server_config.PLUGINS[suffix];
         if(util.endsWith(req_path, suffix)) {
             child_process.execFile(command, [req_path, ], function (err, data) {
+                res.writeHead(200, {'Content-Type': 'text/html'});
                 res.write(data);
                 res.end();
             });
