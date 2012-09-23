@@ -1,8 +1,8 @@
-<!DOCTYPE>
-    <html>
+<!DOCTYPE html>
+        <html>
 <head>
     <meta charset="utf8">
-    <title>PHP测试</title>
+    <title>Test PHP</title>
 </head>
 <body>
 <?php
@@ -13,10 +13,16 @@
  * Time: 下午1:24
  * To change this template use File | Settings | File Templates.
  */
+//header('Location: test.html');
 echo 'This is a php file'.'<br />';
 session_start();
 $_SESSION['username'] = 'zhouwei';
-var_dump($_SESSION);
+echo ($_SESSION['username']);
+
 ?>
-</body>
+                 <br />
+        <a href="https://github.com/zoowii">Fork me</a>
+<hr />
+<img src="/favicon.ico" style="width: 200px; height: 200px;" title="图片" />
+   </body>
 </html>
