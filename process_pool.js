@@ -11,7 +11,7 @@ exports.master = {
     child_processes:[],
     inited: false,
     config:function (exec_path, max_count, min_count) {
-        this.exec_path = exec_path || 'php-cgi -b 127.0.0.1:9000';
+        this.exec_path = exec_path || 'php-cgi';
         this.max_count = max_count || 10;
         this.min_count = min_count || 2;
     },

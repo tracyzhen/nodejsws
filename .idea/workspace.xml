@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1e0a7a9-29d9-42a8-8bc7-01ed655500d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nws_http.js" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\license.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\readme.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-activate.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-app.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-blog-header.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-comments-post.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-config-sample.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-cron.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-links-opml.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-load.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-login.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-mail.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-settings.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-signup.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\wp-trackback.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\xmlrpc.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nws_http.js" afterPath="$PROJECT_DIR$/nws_http.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/process_pool.js" afterPath="$PROJECT_DIR$/process_pool.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test1.php" afterPath="$PROJECT_DIR$/test1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util.js" afterPath="$PROJECT_DIR$/util.js" />
     </list>
     <ignored path="nodejsws.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +32,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="40" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.68900806">
+            <state line="75" column="39" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup-config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/setup-config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="42" selection-start="2725" selection-end="2725" vertical-scroll-proportion="-3.1666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.dev.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/js/common.dev.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="13" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="453" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customize-controls.dev.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.dev.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="711" column="35" selection-start="18617" selection-end="18617" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customize-controls.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="5528" selection-start="5528" selection-end="5528" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -57,7 +89,16 @@
       <file leaf-file-name="nws_http.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nws_http.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="30" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+            <state line="14" column="94" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="23" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,35 +107,19 @@
       <file leaf-file-name="process_pool.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process_pool.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="59" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
+            <state line="37" column="60" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test1.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test1.php">
+      <file leaf-file-name="test2.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.6785714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="50" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test302.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test302.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="31" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.6785714">
-              <folding />
+            <state line="12" column="27" selection-start="274" selection-end="274" vertical-scroll-proportion="-8.142858">
+              <folding>
+                <element signature="e#6#168#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,22 +139,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/node.js" />
-        <option value="$PROJECT_DIR$/util.js" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/test.rb" />
-        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/wordpress/index.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-blog-header.php" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/test302.php" />
-        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/test1.php" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/nws_http.js" />
         <option value="$PROJECT_DIR$/process_pool.js" />
+        <option value="$PROJECT_DIR$/test2.php" />
+        <option value="$PROJECT_DIR$/nws_http.js" />
+        <option value="$PROJECT_DIR$/util.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/wordpress/wp-admin/setup-config.php" />
+        <option value="$PROJECT_DIR$/wordpress/wp-admin/js/common.dev.js" />
+        <option value="$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.dev.js" />
       </list>
     </option>
   </component>
@@ -194,6 +219,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejsws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejsws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejsws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejsws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejsws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejsws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -219,6 +298,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PhpstormProjects\nodejsws" />
+      <recent name="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PhpstormProjects\nodejsws" />
@@ -312,10 +392,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -323,13 +404,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -394,72 +474,21 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="54" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="78" selection-end="78" vertical-scroll-proportion="0.19689119" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="86" selection-end="86" vertical-scroll-proportion="0.31843576" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpMyAdmin/browse_foreigners.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="45" selection-start="284" selection-end="284" vertical-scroll-proportion="0.715942" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="369" selection-end="369" vertical-scroll-proportion="0.5170068">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test302.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="31" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.6785714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="47" selection-start="396" selection-end="396" vertical-scroll-proportion="0.6368715">
+        <state line="1" column="31" selection-start="37" selection-end="37" vertical-scroll-proportion="0.053072624">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.6785714">
+        <state line="2" column="18" selection-start="23" selection-end="23" vertical-scroll-proportion="0.10614525">
           <folding />
         </state>
       </provider>
@@ -471,23 +500,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="332" selection-end="332" vertical-scroll-proportion="0.20391062">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="27" selection-start="274" selection-end="274" vertical-scroll-proportion="-8.142858">
+          <folding>
+            <element signature="e#6#168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="33" selection-start="369" selection-end="369" vertical-scroll-proportion="0.7046632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/process_pool.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="59" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
+        <state line="37" column="60" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nws_http.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+        <state line="14" column="94" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="23" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="40" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.68900806">
+        <state line="75" column="39" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/setup-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="42" selection-start="2725" selection-end="2725" vertical-scroll-proportion="-3.1666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/js/common.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="13" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="453" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="711" column="35" selection-start="18617" selection-end="18617" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5528" selection-start="5528" selection-end="5528" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

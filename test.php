@@ -14,6 +14,7 @@
  * To change this template use File | Settings | File Templates.
  */
 //header('Location: test.html');
+require('./test1.php');
 echo 'This is a php file'.'<br />';
 session_start();
 $_SESSION['username'] = 'zhouwei';

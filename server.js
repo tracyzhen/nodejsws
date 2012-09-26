@@ -50,26 +50,47 @@ http.createServer(function (req, res) {
         for (var tmp3 in php_get_params) {
             exec_array.push(tmp3);
         }
-        console.log(exec_array);
+        var params = {};
+        for (var k in php_get_params) {
+            var tmp = php_get_params[k].split('=');
+            if (tmp.length > 1) {
+                params[tmp[0]] = tmp[1];
+            } else if (tmp.length == 1) {
+                params[tmp[0]] = '';
+            }
+        }
         if (util.endsWith(req_path, suffix)) {
-            var result_handler = function (err, data) {
+            var result_handler = function (err, data) { // function to handle the result the php-cgi output
                 var lines = data.split('\r\n');
                 var headers = {};
                 var line;
-                for (var k in lines) {
+                var content = '';
+                var is_ended_header = false;
+                var k = 0;
+                for (k in lines) {
                     line = lines[k];
+                    if(is_ended_header) {
+                        content = line;
+                        break;
+                    }
                     if (line != "") {
                         var header_pair = line.split(': ');
                         headers[header_pair[0]] = header_pair[1];
                     } else {
-                        break;
+                        is_ended_header = true;
+//                        break;
                     }
                 }
-                res.writeHead(headers.Status != undefined ? parseInt(headers['Status'].substr(0, 3)) : 200, headers); // 307 redirect, 200 common
-                res.write(data);
+                res.writeHead(headers.Status != undefined ? parseInt(headers['Status'].substr(0, 3)) : 200,
+                    headers); // 307 redirect, 200 common
+                res.write(content);
                 res.end();
             };
-            nws_http.get(process_pool.worker(), req_path, [], result_handler);
+            if (req_method == 'GET') {
+                nws_http.get(process_pool.worker(), req_path, params, result_handler);
+            } else {
+                nws_http.post(process_pool.worker(), req_path, params, result_handler);
+            }
 //            child_process.execFile(command, req_method == 'GET' ? exec_array : [req_path], result_handler);
             return;
         }
