@@ -60,6 +60,13 @@ http.createServer(function (req, res) {
             }
         }
         if (util.endsWith(req_path, suffix)) {
+            if(!util.endsWith(req_path, '.php')) {
+                if(util.endsWith(req_path, '/')) {
+                    req_path += 'index.php';
+                } else {
+                    req_path += '/index.php';
+                }
+            }
             var result_handler = function (err, data) { // function to handle the result the php-cgi output
                 var lines = data.split('\r\n');
                 var headers = {};
@@ -105,5 +112,5 @@ http.createServer(function (req, res) {
         res.write(data);
         res.end();
     });
-}).listen(8080);
-console.log('listening: http://l27.0.0.1:8080');
+}).listen(80);
+console.log('listening: http://l27.0.0.1:80');

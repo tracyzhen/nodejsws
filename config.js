@@ -11,7 +11,8 @@ exports.server_config = {
     PLUGINS: {
         'php': 'php-cgi', // the suffix and the executable command
         'py': 'python',
-        'rb': 'ruby'
+        'rb': 'ruby',
+        '/': 'php-cgi'
 //        'js': 'node'
     }
 };
