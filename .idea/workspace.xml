@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1e0a7a9-29d9-42a8-8bc7-01ed655500d8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/process_pool.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test1.php" />
       <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\index.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\license.txt" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress-3.4.1\wordpress\readme.html" afterPath="" />
@@ -1000,7 +1002,8 @@
       <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress\wordpress\wp-signup.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress\wordpress\wp-trackback.php" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress\wordpress\xmlrpc.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.js" afterPath="$PROJECT_DIR$/test.js" />
     </list>
     <ignored path="nodejsws.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1023,22 +1026,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="87" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.80804956">
+            <state line="54" column="61" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
+      <file leaf-file-name="process_pool.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process_pool.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="59" selection-start="106" selection-end="106" vertical-scroll-proportion="1.4642857">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="34" column="60" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test1.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.6785714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="27" selection-start="74" selection-end="74" vertical-scroll-proportion="0.098445594">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1047,15 +1066,6 @@
         <entry file="file://$PROJECT_DIR$/test302.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="31" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.6785714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="33" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1078,7 +1088,6 @@
       <list>
         <option value="$PROJECT_DIR$/node.js" />
         <option value="$PROJECT_DIR$/util.js" />
-        <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/test.rb" />
         <option value="$PROJECT_DIR$/README" />
@@ -1089,6 +1098,9 @@
         <option value="$PROJECT_DIR$/test302.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/test1.php" />
+        <option value="$PROJECT_DIR$/process_pool.js" />
       </list>
     </option>
   </component>
@@ -1125,6 +1137,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1145,16 +1167,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1163,7 +1175,7 @@
     <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simu-dev" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test.js" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1184,7 +1196,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Node.js.server.js">
-    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="$PROJECT_DIR$/server.js" working-dir="$PROJECT_DIR$" coffeescript-run="false">
+    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
@@ -1206,8 +1218,14 @@
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="test.js" working-dir="$PROJECT_DIR$">
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Node.js.server.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.test.js" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -1264,19 +1282,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28119937" sideWeight="0.6710098" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29092383" sideWeight="0.6710098" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1347,15 +1365,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="26" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1373,11 +1382,6 @@
     <entry file="file://$PROJECT_DIR$/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="38" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util.js">
@@ -1405,9 +1409,14 @@
         <state line="6" column="21" selection-start="86" selection-end="86" vertical-scroll-proportion="0.31843576" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/phpMyAdmin/browse_foreigners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="45" selection-start="284" selection-end="284" vertical-scroll-proportion="0.715942" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
+        <state line="16" column="33" selection-start="369" selection-end="369" vertical-scroll-proportion="0.5170068">
           <folding />
         </state>
       </provider>
@@ -1419,25 +1428,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phpMyAdmin/browse_foreigners.php">
+    <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="284" selection-end="284" vertical-scroll-proportion="0.715942">
+        <state line="18" column="47" selection-start="396" selection-end="396" vertical-scroll-proportion="0.6368715">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/test1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="59" selection-start="106" selection-end="106" vertical-scroll-proportion="1.4642857">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.6785714">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="87" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.80804956">
+        <state line="54" column="61" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_pool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="60" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="27" selection-start="74" selection-end="74" vertical-scroll-proportion="0.098445594">
           <folding />
         </state>
       </provider>
