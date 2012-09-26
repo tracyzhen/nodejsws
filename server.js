@@ -12,6 +12,8 @@ var util = require('./util');
 var http = require('http');
 var fs = require('fs');
 var child_process = require('child_process');
+var process_pool = require('./process_pool');
+var nws_http = require('./nws_http');
 
 http.createServer(function (req, res) {
 
@@ -39,18 +41,18 @@ http.createServer(function (req, res) {
         var command = config.server_config.PLUGINS[suffix];
         var tmp1 = req_path.split('?');
         var php_get_params = [];
-        if(tmp1.length > 1) {
+        if (tmp1.length > 1) {
             req_path = tmp1[0];
             var tmp2 = tmp1[1];
             php_get_params = tmp2.split('&');
         }
         var exec_array = [req_path];
-        for(var tmp3 in php_get_params) {
+        for (var tmp3 in php_get_params) {
             exec_array.push(tmp3);
         }
         console.log(exec_array);
         if (util.endsWith(req_path, suffix)) {
-            child_process.execFile(command, req_method == 'GET' ? exec_array: [req_path], function (err, data) {
+            var result_handler = function (err, data) {
                 var lines = data.split('\r\n');
                 var headers = {};
                 var line;
@@ -66,7 +68,9 @@ http.createServer(function (req, res) {
                 res.writeHead(headers.Status != undefined ? parseInt(headers['Status'].substr(0, 3)) : 200, headers); // 307 redirect, 200 common
                 res.write(data);
                 res.end();
-            });
+            };
+            nws_http.get(process_pool.worker(), req_path, [], result_handler);
+//            child_process.execFile(command, req_method == 'GET' ? exec_array : [req_path], result_handler);
             return;
         }
     }
@@ -81,3 +85,4 @@ http.createServer(function (req, res) {
         res.end();
     });
 }).listen(8080);
+console.log('listening: http://l27.0.0.1:8080');
