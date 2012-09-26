@@ -179,14 +179,14 @@ function retrieve_password() {
 
 	$errors = new WP_Error();
 
-	if ( empty( $_POST['user_login'] ) ) {
+	if ( empty( $_REQUEST['user_login'] ) ) {
 		$errors->add('empty_username', __('<strong>ERROR</strong>: Enter a username or e-mail address.'));
-	} else if ( strpos( $_POST['user_login'], '@' ) ) {
-		$user_data = get_user_by( 'email', trim( $_POST['user_login'] ) );
+	} else if ( strpos( $_REQUEST['user_login'], '@' ) ) {
+		$user_data = get_user_by( 'email', trim( $_REQUEST['user_login'] ) );
 		if ( empty( $user_data ) )
 			$errors->add('invalid_email', __('<strong>ERROR</strong>: There is no user registered with that email address.'));
 	} else {
-		$login = trim($_POST['user_login']);
+		$login = trim($_REQUEST['user_login']);
 		$user_data = get_user_by('login', $login);
 	}
 
@@ -379,7 +379,7 @@ if ( SITECOOKIEPATH != COOKIEPATH )
 do_action( 'login_init' );
 do_action( 'login_form_' . $action );
 
-$http_post = ('POST' == $_SERVER['REQUEST_METHOD']);
+$http_post = ('GET' == $_SERVER['REQUEST_METHOD']);
 switch ($action) {
 
 case 'postpass' :
@@ -390,7 +390,7 @@ case 'postpass' :
 	}
 
 	// 10 days
-	setcookie( 'wp-postpass_' . COOKIEHASH, $wp_hasher->HashPassword( stripslashes( $_POST['post_password'] ) ), time() + 864000, COOKIEPATH );
+	setcookie( 'wp-postpass_' . COOKIEHASH, $wp_hasher->HashPassword( stripslashes( $_REQUEST['post_password'] ) ), time() + 864000, COOKIEPATH );
 
 	wp_safe_redirect( wp_get_referer() );
 	exit();
@@ -425,11 +425,11 @@ case 'retrievepassword' :
 	do_action('lost_password');
 	login_header(__('Lost Password'), '<p class="message">' . __('Please enter your username or email address. You will receive a link to create a new password via email.') . '</p>', $errors);
 
-	$user_login = isset($_POST['user_login']) ? stripslashes($_POST['user_login']) : '';
+	$user_login = isset($_REQUEST['user_login']) ? stripslashes($_REQUEST['user_login']) : '';
 
 ?>
 
-<form name="lostpasswordform" id="lostpasswordform" action="<?php echo esc_url( site_url( 'wp-login.php?action=lostpassword', 'login_post' ) ); ?>" method="post">
+<form name="lostpasswordform" id="lostpasswordform" action="<?php echo esc_url( site_url( 'wp-login.php?action=lostpassword', 'login_post' ) ); ?>" method="get">
 	<p>
 		<label for="user_login" ><?php _e('Username or E-mail:') ?><br />
 		<input type="text" name="user_login" id="user_login" class="input" value="<?php echo esc_attr($user_login); ?>" size="20" tabindex="10" /></label>
@@ -461,10 +461,10 @@ case 'rp' :
 
 	$errors = '';
 
-	if ( isset($_POST['pass1']) && $_POST['pass1'] != $_POST['pass2'] ) {
+	if ( isset($_REQUEST['pass1']) && $_REQUEST['pass1'] != $_REQUEST['pass2'] ) {
 		$errors = new WP_Error('password_reset_mismatch', __('The passwords do not match.'));
-	} elseif ( isset($_POST['pass1']) && !empty($_POST['pass1']) ) {
-		reset_password($user, $_POST['pass1']);
+	} elseif ( isset($_REQUEST['pass1']) && !empty($_REQUEST['pass1']) ) {
+		reset_password($user, $_REQUEST['pass1']);
 		login_header( __( 'Password Reset' ), '<p class="message reset-pass">' . __( 'Your password has been reset.' ) . ' <a href="' . esc_url( wp_login_url() ) . '">' . __( 'Log in' ) . '</a></p>' );
 		login_footer();
 		exit;
@@ -476,7 +476,7 @@ case 'rp' :
 	login_header(__('Reset Password'), '<p class="message reset-pass">' . __('Enter your new password below.') . '</p>', $errors );
 
 ?>
-<form name="resetpassform" id="resetpassform" action="<?php echo esc_url( site_url( 'wp-login.php?action=resetpass&key=' . urlencode( $_GET['key'] ) . '&login=' . urlencode( $_GET['login'] ), 'login_post' ) ); ?>" method="post">
+<form name="resetpassform" id="resetpassform" action="<?php echo esc_url( site_url( 'wp-login.php?action=resetpass&key=' . urlencode( $_REQUEST['key'] ) . '&login=' . urlencode( $_REQUEST['login'] ), 'login_post' ) ); ?>" method="get">
 	<input type="hidden" id="user_login" value="<?php echo esc_attr( $_GET['login'] ); ?>" autocomplete="off" />
 
 	<p>
@@ -521,11 +521,11 @@ case 'register' :
 	$user_login = '';
 	$user_email = '';
 	if ( $http_post ) {
-		$user_login = $_POST['user_login'];
-		$user_email = $_POST['user_email'];
+		$user_login = $_REQUEST['user_login'];
+		$user_email = $_REQUEST['user_email'];
 		$errors = register_new_user($user_login, $user_email);
 		if ( !is_wp_error($errors) ) {
-			$redirect_to = !empty( $_POST['redirect_to'] ) ? $_POST['redirect_to'] : 'wp-login.php?checkemail=registered';
+			$redirect_to = !empty( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : 'wp-login.php?checkemail=registered';
 			wp_safe_redirect( $redirect_to );
 			exit();
 		}
@@ -569,21 +569,21 @@ default:
 		wp_enqueue_script( 'customize-base' );
 
 	// If the user wants ssl but the session is not ssl, force a secure cookie.
-	if ( !empty($_POST['log']) && !force_ssl_admin() ) {
-		$user_name = sanitize_user($_POST['log']);
-		if ( $user = get_user_by('login', $user_name) ) {
-			if ( get_user_option('use_ssl', $user->ID) ) {
-				$secure_cookie = true;
-				force_ssl_admin(true);
-			}
-		}
-	}
+//	if ( !empty($_REQUEST['log']) && !force_ssl_admin() ) {
+//		$user_name = sanitize_user($_REQUEST['log']);
+//		if ( $user = get_user_by('login', $user_name) ) {
+//			if ( get_user_option('use_ssl', $user->ID) ) {
+//				$secure_cookie = true;
+//				force_ssl_admin(true);
+//			}
+//		}
+//	}
 
 	if ( isset( $_REQUEST['redirect_to'] ) ) {
 		$redirect_to = $_REQUEST['redirect_to'];
 		// Redirect to https if user wants ssl
-		if ( $secure_cookie && false !== strpos($redirect_to, 'wp-admin') )
-			$redirect_to = preg_replace('|^http://|', 'https://', $redirect_to);
+//		if ( $secure_cookie && false !== strpos($redirect_to, 'wp-admin') )
+//			$redirect_to = preg_replace('|^http://|', 'https://', $redirect_to);
 	} else {
 		$redirect_to = admin_url();
 	}
@@ -593,8 +593,8 @@ default:
 	// If the user was redirected to a secure login form from a non-secure admin page, and secure login is required but secure admin is not, then don't use a secure
 	// cookie and redirect back to the referring non-secure admin page. This allows logins to always be POSTed over SSL while allowing the user to choose visiting
 	// the admin via http or https.
-	if ( !$secure_cookie && is_ssl() && force_ssl_login() && !force_ssl_admin() && ( 0 !== strpos($redirect_to, 'https') ) && ( 0 === strpos($redirect_to, 'http') ) )
-		$secure_cookie = false;
+//	if ( !$secure_cookie && is_ssl() && force_ssl_login() && !force_ssl_admin() && ( 0 !== strpos($redirect_to, 'https') ) && ( 0 === strpos($redirect_to, 'http') ) )
+//		$secure_cookie = false;
 
 	$user = wp_signon('', $secure_cookie);
 
@@ -638,8 +638,8 @@ default:
 		$errors = new WP_Error();
 
 	// If cookies are disabled we can't log in even with a valid user+pass
-	if ( isset($_POST['testcookie']) && empty($_COOKIE[TEST_COOKIE]) )
-		$errors->add('test_cookie', __("<strong>ERROR</strong>: Cookies are blocked or not supported by your browser. You must <a href='http://www.google.com/cookies.html'>enable cookies</a> to use WordPress."));
+//	if ( isset($_REQUEST['testcookie']) && empty($_COOKIE[TEST_COOKIE]) )
+//		$errors->add('test_cookie', __("<strong>ERROR</strong>: Cookies are blocked or not supported by your browser. You must <a href='http://www.google.com/cookies.html'>enable cookies</a> to use WordPress."));
 
 	// Some parts of this script use the main login form to display a message
 	if		( isset($_GET['loggedout']) && true == $_GET['loggedout'] )
@@ -658,17 +658,17 @@ default:
 		$errors->add('updated', __( '<strong>You have successfully updated WordPress!</strong> Please log back in to experience the awesomeness.' ), 'message' );
 
 	// Clear any stale cookies.
-	if ( $reauth )
-		wp_clear_auth_cookie();
+//	if ( $reauth )
+//		wp_clear_auth_cookie();
 
 	login_header(__('Log In'), '', $errors);
 
-	if ( isset($_POST['log']) )
-		$user_login = ( 'incorrect_password' == $errors->get_error_code() || 'empty_password' == $errors->get_error_code() ) ? esc_attr(stripslashes($_POST['log'])) : '';
-	$rememberme = ! empty( $_POST['rememberme'] );
+	if ( isset($_REQUEST['log']) )
+		$user_login = ( 'incorrect_password' == $errors->get_error_code() || 'empty_password' == $errors->get_error_code() ) ? esc_attr(stripslashes($_REQUEST['log'])) : '';
+	$rememberme = ! empty( $_REQUEST['rememberme'] );
 ?>
 
-<form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
+<form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="get">
 	<p>
 		<label for="user_login"><?php _e('Username') ?><br />
 		<input type="text" name="log" id="user_login" class="input" value="<?php echo esc_attr($user_login); ?>" size="20" tabindex="10" /></label>
