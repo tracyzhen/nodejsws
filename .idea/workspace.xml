@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b1e0a7a9-29d9-42a8-8bc7-01ed655500d8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nws_http.js" afterPath="$PROJECT_DIR$/nws_http.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2.php" afterPath="$PROJECT_DIR$/test2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_post.php" afterPath="$PROJECT_DIR$/test_post.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util.js" afterPath="$PROJECT_DIR$/util.js" />
     </list>
     <ignored path="nodejsws.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="36" selection-start="3413" selection-end="3413" vertical-scroll-proportion="0.0">
+            <state line="69" column="34" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.6062176">
               <folding />
             </state>
           </provider>
@@ -40,16 +41,16 @@
       <file leaf-file-name="util.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="29" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+            <state line="21" column="25" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nws_http.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="nws_http.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nws_http.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="58" selection-start="912" selection-end="912" vertical-scroll-proportion="0.3316062">
+            <state line="10" column="44" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,12 +90,12 @@
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/wordpress/wp-config.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-login.php" />
-        <option value="$PROJECT_DIR$/test_post.php" />
-        <option value="$PROJECT_DIR$/util.js" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/test2.php" />
-        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/test_post.php" />
+        <option value="$PROJECT_DIR$/util.js" />
         <option value="$PROJECT_DIR$/nws_http.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -277,7 +278,11 @@
       <created>1348750204921</created>
       <updated>1348750204921</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="successfully post data to php-cgi, but still have some bugs.&#10;TODO: post multi pair data to php-cgi">
+      <created>1348753403176</created>
+      <updated>1348753403176</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -341,7 +346,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to find the solution of output &quot;No input file specified.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully post data to php-cgi, but still have some bugs.&#10;TODO: post multi pair data to php-cgi" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -360,6 +365,7 @@
     <MESSAGE value="add readme file" />
     <MESSAGE value="fix a bug of content-type" />
     <MESSAGE value="trying to find the solution of output &quot;No input file specified.&quot;" />
+    <MESSAGE value="successfully post data to php-cgi, but still have some bugs.&#10;TODO: post multi pair data to php-cgi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -422,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="57" selection-start="192" selection-end="192" vertical-scroll-proportion="0.424581">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.47765362">
@@ -436,23 +435,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/test_post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="36" selection-start="3413" selection-end="3413" vertical-scroll-proportion="0.0">
+        <state line="7" column="43" selection-start="140" selection-end="140" vertical-scroll-proportion="0.3715084">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="29" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+        <state line="21" column="25" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nws_http.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="58" selection-start="912" selection-end="912" vertical-scroll-proportion="0.3316062">
+        <state line="10" column="44" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="34" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.6062176">
           <folding />
         </state>
       </provider>

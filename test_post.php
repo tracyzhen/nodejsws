@@ -5,7 +5,7 @@
     <title>测试POST</title>
 </head>
 <body>
-<form action="/test2.php" method="post">
+<form action="/test2.php?hello=world" method="post">
     <input type="text" name="name" placeholder="Name">
     <br />
     <input type="text" name="age" placeholder="Age">

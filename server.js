@@ -16,6 +16,7 @@ var process_pool = require('./process_pool');
 var nws_http = require('./nws_http');
 var string_decoder = require('string_decoder');
 var decoder = new string_decoder.StringDecoder('utf8');
+var querystring = require('querystring');
 
 http.createServer(function (req, res) {
 
@@ -84,7 +85,7 @@ http.createServer(function (req, res) {
                         break;
                     }
                 }
-                res.writeHead(headers.Status != undefined ? parseInt(headers['Status'].substr(0, 3)) : 500,
+                res.writeHead(headers.Status != undefined ? parseInt(headers['Status'].substr(0, 3)) : 200,
                     headers); // 30x redirect, 200 common
                 res.write(content);
                 res.end();
@@ -93,8 +94,8 @@ http.createServer(function (req, res) {
                 nws_http.get(process_pool.worker(), req_path, params, result_handler);
             } else {
                 req.on('data', function (data) {
-                    var param_obj = util.parse_post_data(decoder.write(data));
-                    nws_http.post(process_pool.worker(), req_path, param_obj, result_handler);
+                    var post_data= data;
+                    nws_http.post(process_pool.worker(), req_path, post_data, params, result_handler);
                 });
             }
 //            child_process.execFile(command, req_method == 'GET' ? exec_array : [req_path], result_handler);

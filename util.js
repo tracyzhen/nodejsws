@@ -19,7 +19,7 @@ exports.build_shell_params_str = function (params) {
     var is_first = true;
     for (var k in params) {
         if(!is_first) {
-            str += ' ';
+            str += '&';
         } else {
             is_first = false;
         }
