@@ -12,7 +12,7 @@ exports.server_config = {
         'php': 'php-cgi', // the suffix and the executable command
         'py': 'python',
         'rb': 'ruby',
-        '/': 'php-cgi'
+        '/': ''
 //        'js': 'node'
     }
 };

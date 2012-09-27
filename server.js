@@ -14,6 +14,8 @@ var fs = require('fs');
 var child_process = require('child_process');
 var process_pool = require('./process_pool');
 var nws_http = require('./nws_http');
+var string_decoder = require('string_decoder');
+var decoder = new string_decoder.StringDecoder('utf8');
 
 http.createServer(function (req, res) {
 
@@ -60,43 +62,40 @@ http.createServer(function (req, res) {
             }
         }
         if (util.endsWith(req_path, suffix)) {
-            if(!util.endsWith(req_path, '.php')) {
-                if(util.endsWith(req_path, '/')) {
+            if (!util.endsWith(req_path, '.php')) {
+                if (util.endsWith(req_path, '/')) {
                     req_path += 'index.php';
                 } else {
                     req_path += '/index.php';
                 }
             }
             var result_handler = function (err, data) { // function to handle the result the php-cgi output
-                var lines = data.split('\r\n');
                 var headers = {};
-                var line;
-                var content = '';
-                var is_ended_header = false;
-                var k = 0;
-                for (k in lines) {
-                    line = lines[k];
-                    if(is_ended_header) {
-                        content = line;
-                        break;
-                    }
-                    if (line != "") {
-                        var header_pair = line.split(': ');
+                var ps = util.splitResponse(data);
+                var header_str = ps[0];
+                var content = ps[1];
+                var lines = header_str.split('\r\n');
+                for (var k in lines) {
+                    var line = lines[k];
+                    if (line != '') {
+                        var header_pair = line.split(': '); // TODO: add exception
                         headers[header_pair[0]] = header_pair[1];
                     } else {
-                        is_ended_header = true;
-//                        break;
+                        break;
                     }
                 }
-                res.writeHead(headers.Status != undefined ? parseInt(headers['Status'].substr(0, 3)) : 200,
-                    headers); // 307 redirect, 200 common
+                res.writeHead(headers.Status != undefined ? parseInt(headers['Status'].substr(0, 3)) : 500,
+                    headers); // 30x redirect, 200 common
                 res.write(content);
                 res.end();
             };
             if (req_method == 'GET') {
                 nws_http.get(process_pool.worker(), req_path, params, result_handler);
             } else {
-                nws_http.post(process_pool.worker(), req_path, params, result_handler);
+                req.on('data', function (data) {
+                    var param_obj = util.parse_post_data(decoder.write(data));
+                    nws_http.post(process_pool.worker(), req_path, param_obj, result_handler);
+                });
             }
 //            child_process.execFile(command, req_method == 'GET' ? exec_array : [req_path], result_handler);
             return;
