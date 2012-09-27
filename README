@@ -10,6 +10,13 @@
 http://photo.renren.com/photo/298217424/photo-6569405192?ref=hotnewsfeed&sfet=709&fin=0&ff_id=298217424
 
 
+2012/9/27
+今天晚上花了点时间把post的功能弄好了，可以发送post数据给php-cgi，也可以在发post请求时可以加入QUERY_STRING，比如：
+向http://.../test.php?hello=world发送post数据{name:'zhangsan'}。不过测试时（通过wordpress测试）发现，安装后wordpress中有很多的url无法访问，
+比如http://?step=2/wp-content/themes/twentyeleven/style.css ，这本身是一个BUG，另外，这个BUG反映出我的这个nodejs缺少一个好的路由机制。
+另外，暂时get数据没有改成和post一样的stdin+环境变量的方式，下次再完成吧。
+
 TODO: 1. 基于redis的通用session服务
-      2. POST提交数据（已经知道一种方案，不过效率优点低）
-      3. FASTCGI怎么保持php-cgi进程不自动退出
+      2. FASTCGI怎么保持php-cgi进程不自动退出
+      3. 路由机制
+      4. 传递get数据的方式改成和post数据一样
