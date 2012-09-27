@@ -8,11 +8,11 @@
 
 exports.server_config = {
     ROOT_DIR:'.',
-    PLUGINS: {
-        'php': 'php-cgi', // the suffix and the executable command
-        'py': 'python',
-        'rb': 'ruby',
-        '/': ''
+    PLUGINS:{
+        'php':'php-cgi', // the suffix and the executable command
+        'py':'python',
+        'rb':'ruby',
+        '/':''
 //        'js': 'node'
     }
 };
