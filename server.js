@@ -31,6 +31,7 @@ http.createServer(function (req, res) {
             req_path = tmp1[0];
         }
     }
+    var path_info = req_url.split('?')[0];
     var resource_type = 'html';
     if (util.endsWith(req_path, 'ico')) {
         resource_type = 'image';
@@ -90,12 +91,13 @@ http.createServer(function (req, res) {
                 res.write(content);
                 res.end();
             };
+//            console.log(req);
             if (req_method == 'GET') {
-                nws_http.get(process_pool.worker(), req_path, params, result_handler);
+                nws_http.get(process_pool.worker(), req_path, params, result_handler, req, path_info);
             } else {
                 req.on('data', function (data) {
                     var post_data= data;
-                    nws_http.post(process_pool.worker(), req_path, post_data, params, result_handler);
+                    nws_http.post(process_pool.worker(), req_path, post_data, params, result_handler, req, path_info);
                 });
             }
 //            child_process.execFile(command, req_method == 'GET' ? exec_array : [req_path], result_handler);
@@ -112,5 +114,5 @@ http.createServer(function (req, res) {
         res.write(data);
         res.end();
     });
-}).listen(80);
-console.log('listening: http://l27.0.0.1:80');
+}).listen(config.server_config.SERVER_PORT);
+console.log('listening: http://l27.0.0.1:' + config.server_config.SERVER_PORT);

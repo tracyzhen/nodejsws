@@ -7,6 +7,7 @@
  */
 
 exports.server_config = {
+    SERVER_PORT: 8080,
     ROOT_DIR:'.',
     PLUGINS:{
         'php':'php-cgi', // the suffix and the executable command

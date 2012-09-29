@@ -2,54 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1e0a7a9-29d9-42a8-8bc7-01ed655500d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/wp-tinymce.js.gz" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/wp-tinymce.js.gz" />
+      <change type="DELETED" beforePath="C:\Users\Administrator\PhpstormProjects\nodejsws\wordpress2\wp-config.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/readme.html" afterPath="$PROJECT_DIR$/wordpress/readme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/about.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-ms-themes-list-table.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-ms-themes-list-table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-plugins-list-table.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-plugins-list-table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-themes-list-table.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-themes-list-table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-upgrader.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/class-wp-upgrader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/meta-boxes.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/meta-boxes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/includes/update-core.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/includes/update-core.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/index.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/common.dev.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/common.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.dev.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/link.dev.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/link.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/link.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/link.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/post.dev.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/post.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/js/post.js" afterPath="$PROJECT_DIR$/wordpress/wp-admin/js/post.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/plugins.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/plugins.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-admin/setup-config.php" afterPath="$PROJECT_DIR$/wordpress/wp-admin/setup-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-config.php" afterPath="$PROJECT_DIR$/wordpress/wp-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/capabilities.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/capabilities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-oembed.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-oembed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-atom-server.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-atom-server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-customize-control.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-customize-control.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-editor.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-editor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-theme.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-theme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-xmlrpc-server.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/class-wp-xmlrpc-server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/css/editor.css" afterPath="$PROJECT_DIR$/wordpress/wp-includes/css/editor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/css/editor.dev.css" afterPath="$PROJECT_DIR$/wordpress/wp-includes/css/editor.dev.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/formatting.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/formatting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/functions.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/imgareaselect/jquery.imgareaselect.dev.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/imgareaselect/jquery.imgareaselect.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/imgareaselect/jquery.imgareaselect.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/imgareaselect/jquery.imgareaselect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/plupload/wp-plupload.dev.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/plupload/wp-plupload.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/plupload/wp-plupload.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/plupload/wp-plupload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/langs/wp-langs.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/langs/wp-langs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin_src.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/wp-lists.dev.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/wp-lists.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/js/wp-lists.js" afterPath="$PROJECT_DIR$/wordpress/wp-includes/js/wp-lists.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/load.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/load.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/rewrite.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/rewrite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/taxonomy.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/taxonomy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/theme.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/theme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-includes/version.php" afterPath="$PROJECT_DIR$/wordpress/wp-includes/version.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-load.php" afterPath="$PROJECT_DIR$/wordpress/wp-load.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordpress/wp-login.php" afterPath="$PROJECT_DIR$/wordpress/wp-login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nws_http.js" afterPath="$PROJECT_DIR$/nws_http.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util.js" afterPath="$PROJECT_DIR$/util.js" />
     </list>
     <ignored path="nodejsws.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,10 +30,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="34" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0">
+            <state line="94" column="36" selection-start="3383" selection-end="3383" vertical-scroll-proportion="0.36010364">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wp-login.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordpress2/wp-login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="353" column="45" selection-start="12750" selection-end="12750" vertical-scroll-proportion="-7.4358974">
               <folding />
             </state>
           </provider>
@@ -84,16 +51,16 @@
       <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+            <state line="9" column="22" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nws_http.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="nws_http.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nws_http.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="44" selection-start="436" selection-end="436" vertical-scroll-proportion="0.32312927">
+            <state line="41" column="19" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,7 +69,7 @@
       <file leaf-file-name="util.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="25" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
+            <state line="88" column="71" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,7 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/test1.php" />
         <option value="$PROJECT_DIR$/process_pool.js" />
@@ -132,13 +98,14 @@
         <option value="$PROJECT_DIR$/wordpress/wp-admin/js/customize-controls.dev.js" />
         <option value="$PROJECT_DIR$/wordpress/wp-config.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-login.php" />
-        <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/test2.php" />
         <option value="$PROJECT_DIR$/test_post.php" />
+        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/util.js" />
+        <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/wordpress2/wp-login.php" />
         <option value="$PROJECT_DIR$/nws_http.js" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
   </component>
@@ -193,6 +160,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejsws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejsws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -242,6 +223,9 @@
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$" coffeescript-run="false">
@@ -334,18 +318,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3006483" sideWeight="0.21824104" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30551052" sideWeight="0.6710098" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30551052" sideWeight="0.6710098" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -419,11 +403,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/setup-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="42" selection-start="2725" selection-end="2725" vertical-scroll-proportion="-3.1666667" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -464,13 +443,6 @@
         <state line="29" column="13" selection-start="683" selection-end="683" vertical-scroll-proportion="0.20347826" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.47765362" />
@@ -481,28 +453,42 @@
         <state line="7" column="43" selection-start="140" selection-end="140" vertical-scroll-proportion="0.3715084" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="30" selection-start="758" selection-end="758" vertical-scroll-proportion="0.8981233" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="25" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0">
+        <state line="88" column="71" selection-start="2265" selection-end="2265" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress2/wp-login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="353" column="45" selection-start="12750" selection-end="12750" vertical-scroll-proportion="-7.4358974">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nws_http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="19" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="34" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="758" selection-end="758" vertical-scroll-proportion="0.8981233" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nws_http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="436" selection-end="436" vertical-scroll-proportion="0.32312927">
+        <state line="94" column="36" selection-start="3383" selection-end="3383" vertical-scroll-proportion="0.36010364">
           <folding />
         </state>
       </provider>

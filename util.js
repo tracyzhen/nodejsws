@@ -18,7 +18,7 @@ exports.build_shell_params_str = function (params) {
     var str = '';
     var is_first = true;
     for (var k in params) {
-        if(!is_first) {
+        if (!is_first) {
             str += '&';
         } else {
             is_first = false;
@@ -79,5 +79,15 @@ exports.parse_post_data = function (data) {
         }
     }
     return result;
+};
+
+exports.parse_host = function (host) {  // host 不包含协议名. eg. host='china.cn:8080'
+    var tmp1 = host.split(':');
+    if (tmp1.length <= 1) {
+        return {host:host, port:80};
+    } else {
+        var port = parseInt(host[1]);
+        return {host:host[0], port: port == 0 ? 80 : port};
+    }
 };
 
