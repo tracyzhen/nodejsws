@@ -220,10 +220,6 @@
 				};
 			});
 
-			// Select a tab
-			this.selected = this.tabs[ panels.first().data('customizeTab') ];
-			this.selected.both.addClass('library-selected');
-
 			// Bind tab switch events
 			this.library.children('ul').on( 'click', 'li', function( event ) {
 				var id  = $(this).data('customizeTab'),
@@ -254,6 +250,18 @@
 				if ( ! this.tabs.uploaded.panel.find('.thumbnail').length )
 					this.tabs.uploaded.both.addClass('hidden');
 			}
+
+			// Select a tab
+			panels.each( function() {
+				var tab = control.tabs[ $(this).data('customizeTab') ];
+
+				// Select the first visible tab.
+				if ( ! tab.link.hasClass('hidden') ) {
+					control.selected = tab;
+					tab.both.addClass('library-selected');
+					return false;
+				}
+			});
 
 			this.dropdownInit();
 		},
@@ -326,7 +334,7 @@
 			this.bind( 'ready', this._ready );
 
 			this.request = $.ajax( this.previewUrl(), {
-				type: 'GET',
+				type: 'POST',
 				data: this.query,
 				xhrFields: {
 					withCredentials: true
@@ -709,7 +717,7 @@
 						action: 'customize_save',
 						nonce:  this.nonce.save
 					}),
-					request = $.get( api.settings.url.ajax, query );
+					request = $.post( api.settings.url.ajax, query );
 
 				api.trigger( 'save', request );
 

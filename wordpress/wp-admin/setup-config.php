@@ -44,11 +44,13 @@ define('WP_DEBUG', false);
 require(ABSPATH . WPINC . '/load.php');
 require(ABSPATH . WPINC . '/version.php');
 
-// Also loads functions.php, plugin.php, l10n.php, pomo/mo.php (all required by setup-config.php)
-wp_load_translations_early();
-
 // Check for the required PHP version and for the MySQL extension or a database drop-in.
 wp_check_php_mysql_versions();
+
+require_once(ABSPATH . WPINC . '/functions.php');
+
+// Also loads plugin.php, l10n.php, pomo/mo.php (all required by setup-config.php)
+wp_load_translations_early();
 
 // Turn register_globals off.
 wp_unregister_GLOBALS();
@@ -73,7 +75,7 @@ if ( file_exists( ABSPATH . 'wp-config.php' ) )
 if ( file_exists(ABSPATH . '../wp-config.php' ) && ! file_exists( ABSPATH . '../wp-settings.php' ) )
 	wp_die( '<p>' . sprintf( __( "The file 'wp-config.php' already exists one level above your WordPress installation. If you need to reset any of the configuration items in this file, please delete it first. You may try <a href='install.php'>installing now</a>."), 'install.php' ) . '</p>' );
 
-$step = isset( $_REQUEST['step'] ) ? (int) $_REQUEST['step'] : 0;
+$step = isset( $_GET['step'] ) ? (int) $_GET['step'] : 0;
 
 /**
  * Display setup wp-config.php file header.
@@ -124,7 +126,7 @@ switch($step) {
 	case 1:
 		display_header();
 	?>
-<form method="get" action="setup-config.php?step=2">
+<form method="post" action="setup-config.php?step=2">
 	<p><?php _e( "Below you should enter your database connection details. If you're not sure about these, contact your host." ); ?></p>
 	<table class="form-table">
 		<tr>
@@ -161,7 +163,7 @@ switch($step) {
 
 	case 2:
 	foreach ( array( 'dbname', 'uname', 'pwd', 'dbhost', 'prefix' ) as $key )
-		$$key = trim( stripslashes( $_REQUEST[ $key ] ) );
+		$$key = trim( stripslashes( $_POST[ $key ] ) );
 
 	$tryagain_link = '</p><p class="step"><a href="setup-config.php?step=1" onclick="javascript:history.go(-1);return false;" class="button">' . __( 'Try Again' ) . '</a>';
 
@@ -188,7 +190,7 @@ switch($step) {
 		wp_die( $wpdb->error->get_error_message() . $tryagain_link );
 
 	// Fetch or generate keys and salts.
-	$no_api = isset( $_REQUEST['noapi'] );
+	$no_api = isset( $_POST['noapi'] );
 	if ( ! $no_api ) {
 		require_once( ABSPATH . WPINC . '/class-http.php' );
 		require_once( ABSPATH . WPINC . '/http.php' );
@@ -217,9 +219,10 @@ switch($step) {
 	}
 
 	$key = 0;
-	foreach ( $config_file as &$line ) {
+	// Not a PHP5-style by-reference foreach, as this file must be parseable by PHP4.
+	foreach ( $config_file as $line_num => $line ) {
 		if ( '$table_prefix  =' == substr( $line, 0, 16 ) ) {
-			$line = '$table_prefix  = \'' . addcslashes( $prefix, "\\'" ) . "';\r\n";
+			$config_file[ $line_num ] = '$table_prefix  = \'' . addcslashes( $prefix, "\\'" ) . "';\r\n";
 			continue;
 		}
 
@@ -234,7 +237,7 @@ switch($step) {
 			case 'DB_USER'     :
 			case 'DB_PASSWORD' :
 			case 'DB_HOST'     :
-				$line = "define('" . $constant . "'," . $padding . "'" . addcslashes( constant( $constant ), "\\'" ) . "');\r\n";
+				$config_file[ $line_num ] = "define('" . $constant . "'," . $padding . "'" . addcslashes( constant( $constant ), "\\'" ) . "');\r\n";
 				break;
 			case 'AUTH_KEY'         :
 			case 'SECURE_AUTH_KEY'  :
@@ -244,7 +247,7 @@ switch($step) {
 			case 'SECURE_AUTH_SALT' :
 			case 'LOGGED_IN_SALT'   :
 			case 'NONCE_SALT'       :
-				$line = "define('" . $constant . "'," . $padding . "'" . $secret_keys[$key++] . "');\r\n";
+				$config_file[ $line_num ] = "define('" . $constant . "'," . $padding . "'" . $secret_keys[$key++] . "');\r\n";
 				break;
 		}
 	}

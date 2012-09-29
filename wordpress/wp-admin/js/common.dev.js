@@ -27,7 +27,7 @@ columns = {
 
 	saveManageColumnsState : function() {
 		var hidden = this.hidden();
-		$.get(ajaxurl, {
+		$.post(ajaxurl, {
 			action: 'hidden-columns',
 			hidden: hidden,
 			screenoptionnonce: $('#screenoptionnonce').val(),
