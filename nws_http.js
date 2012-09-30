@@ -12,7 +12,7 @@ exports.post = function (process, post_data, result_handle, req, reqObj, res) {
         GATEWAY_INTERFACE: 'CGI/1.1',
         CONTENT_LENGTH: req.headers['content-length'], // post_data.length,
         CONTENT_TYPE: req.headers['content-type'], // 'application/x-www-form-urlencoded',
-        SERVER_NAME: 'zhouwei.me',
+        SERVER_NAME: config.server_config.SERVER_NAME,
         SERVER_PORT: config.server_config.SERVER_PORT,
         QUERY_STRING: reqObj.query_string,
         SERVER_SOFTWARE: 'nodejsws/0.01',
@@ -23,7 +23,7 @@ exports.post = function (process, post_data, result_handle, req, reqObj, res) {
 //        SERVER_PROTOCOL: '',
         REMOTE_ADDR: '', // client ip
         REMOTE_PORT: '', // client port
-        SERVER_ADDR: util.parse_host(req.headers.host).host, // server ip
+        SERVER_ADDR: config.server_config.SERVER_ADDR, // server ip
         HTTPS: '',
         HTTP_REFERER: req.headers.referer,
         HTTP_ACCEPT_ENCODING: req.headers['accept-encoding'],
@@ -34,7 +34,7 @@ exports.post = function (process, post_data, result_handle, req, reqObj, res) {
         HTTP_USER_AGENT: req.headers['user-agent'],
         ORIGIN: req.headers.origin,
         CACHE_CONTROL: req.headers['cache_control'],
-        CONNECTION: req.headers['connection'],
+        HTTP_CONNECTION: req.headers['connection'],
         HTTP_HOST: req.headers.host,
         PATH_INFO: reqObj.path_info,
         PHP_SELF: reqObj.req_path
@@ -57,7 +57,7 @@ exports.get = function (process, result_handle, req, reqObj, res) {
         GATEWAY_INTERFACE: 'CGI/1.1',
         CONTENT_LENGTH: 0,
         CONTENT_TYPE: 'text/plain',
-        SERVER_NAME: 'zhouwei.me',
+        SERVER_NAME: config.server_config.SERVER_NAME,
         QUERY_STRING: reqObj.query_string,
         SERVER_SOFTWARE: 'nodejsws/0.01',
         SCRIPT_NAME: 'php-cgi',
@@ -67,7 +67,7 @@ exports.get = function (process, result_handle, req, reqObj, res) {
         SERVER_PROTOCOL: 'http/1.0',
         REMOTE_ADDR: '', // client ip
         REMOTE_PORT: '', // client port
-        SERVER_ADDR: '127.0.0.1', // server ip
+        SERVER_ADDR: config.server_config.SERVER_ADDR, // server ip
         SERVER_PORT: config.server_config.SERVER_PORT, // server port
         HTTPS: '',
         HTTP_REFERER: req.headers.referer,
