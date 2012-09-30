@@ -1,3 +1,2 @@
-var process_pool = require('./process_pool');
+var util = require('./util');
 
-process_pool.master.init();

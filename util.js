@@ -6,13 +6,18 @@
  * To change this template use File | Settings | File Templates.
  */
 
-exports.endsWith = function (str, endstr) {
+var urllib = require('url'),
+    config = require('./config');
+
+function endsWith(str, endstr) {
     var endslen = parseInt(endstr.length);
     if (str.substr(-endslen, endslen) == endstr) {
         return true;
     }
     return false;
-};
+}
+
+exports.endsWith = endsWith;
 
 exports.build_shell_params_str = function (params) {
     var str = '';
@@ -87,7 +92,60 @@ exports.parse_host = function (host) {  // host 不包含协议名. eg. host='ch
         return {host:host, port:80};
     } else {
         var port = parseInt(host[1]);
-        return {host:host[0], port: port == 0 ? 80 : port};
+        return {host:host[0], port:port == 0 ? 80 : port};
     }
+};
+
+function parsePath(urlObj) {
+    var pathname = urlObj.pathname;
+    var idx = pathname.indexOf('.');
+    if (idx < 0) {
+        return {
+            realPath:endsWith(pathname, '/') ? (pathname + 'index.php') : (pathname + '/index.php'),
+            pathInfo:''
+        };
+    } else {
+        var idx2 = pathname.substr(idx, pathname.length - idx).indexOf('/');
+        if (idx2 < 0) {
+            return {
+                realPath:pathname,
+                pathInfo:''
+            };
+        } else {
+            return {
+                realPath:pathname.substring(0, idx + idx2),
+                pathInfo:pathname.substring(idx + idx2)
+            };
+        }
+    }
+}
+
+exports.parsePath = parsePath;
+
+exports.parse_request = function (req) {
+    var urlObj = urllib.parse(req.url);
+    var requestMethod = req.method;
+    var headers = req.headers;
+    var pathObj = parsePath(urlObj);
+    var type = 'php';
+    if (endsWith(pathObj.realPath.toLowerCase(), '.php')) {
+        type = 'php';
+    } else if (endsWith(pathObj.realPath.toLowerCase(), '.js') || endsWith(pathObj.realPath.toLowerCase(), '.css'
+        || endsWith(pathObj.realPath.toLowerCase(), '.less') || endsWith(pathObj.realPath.toLowerCase(), '.txt'))) {
+        type = 'plain';
+    } else {
+        type = 'binary';
+    }
+    return {
+        type:type,
+        url:urlObj,
+        request_method:requestMethod,
+        headers:headers,
+        query_string:urlObj.query == undefined ? '' : urlObj.query,
+        pathname:urlObj.pathname,
+        real_path:pathObj.realPath,
+        path_info:pathObj.pathInfo,
+        req_path:config.server_config.ROOT_DIR + pathObj.realPath
+    };
 };
 

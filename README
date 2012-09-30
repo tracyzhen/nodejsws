@@ -1,14 +1,7 @@
-基于node.js的静态web服务器，以提供静态资源服务为主，提供少量动态功能。
+基于node.js的web服务器，支持PHP。
 
-2012/8/23下午开始项目。
-
-2012/9/26
-这两天话了点时间把这个项目推进了一下，为了校招简历好看点:)
-通过hacking，将post改成get，已经成功把wordpress3.4.1安装到nodejsws上并可以正常显示。
-也成功的让wordpress在nodejs上在线更新到3.4.2版本。
-整个过程没有报错
-http://photo.renren.com/photo/298217424/photo-6569405192?ref=hotnewsfeed&sfet=709&fin=0&ff_id=298217424
-
+2012/9/30
+中秋快乐。今天开始重构，并添加了一个router的功能。
 
 2012/9/27
 今天晚上花了点时间把post的功能弄好了，可以发送post数据给php-cgi，也可以在发post请求时可以加入QUERY_STRING，比如：
@@ -16,7 +9,11 @@ http://photo.renren.com/photo/298217424/photo-6569405192?ref=hotnewsfeed&sfet=70
 比如http://?step=2/wp-content/themes/twentyeleven/style.css ，这本身是一个BUG，另外，这个BUG反映出我的这个nodejs缺少一个好的路由机制。
 另外，暂时get数据没有改成和post一样的stdin+环境变量的方式，下次再完成吧。
 
+2012/9/26
+这两天话了点时间把这个项目推进了一下，为了校招简历好看点:)
+通过hacking，将post改成get，已经成功把wordpress3.4.1安装到nodejsws上并可以正常显示。
+
+2012/8/23下午开始项目。不过基本没做什么。以后很长时间估计也不会做什么。
+
 TODO: 1. 基于redis的通用session服务
       2. FASTCGI怎么保持php-cgi进程不自动退出
-      3. 路由机制
-      4. 传递get数据的方式改成和post数据一样
