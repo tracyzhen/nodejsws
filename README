@@ -1,5 +1,8 @@
 基于node.js的web服务器，支持PHP。
 
+2012/10/2
+今天什么都没做，就改了一下README，加了一个TODO
+
 2012/9/30
 中秋快乐。今天开始重构，并添加了一个router的功能。
 
@@ -18,3 +21,5 @@
 
 TODO: 1. 基于redis的通用session服务
       2. FASTCGI怎么保持php-cgi进程不自动退出
+	  3. 把Nodejs的结构改成：一个进程接收请求(master)，一个进程池管理若干个server实例（server.js进程，busy, idel, etc.），master进程把请求转发给server实例池，由server实例池分配给空闲server实例，server实例才实际处理请求，就和目前的版本一样，处理完后把结果发送给master。这样一来就可以避免了nodejs单进程的缺陷，利用多核处理器的优势了。
+	  
