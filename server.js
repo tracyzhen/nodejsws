@@ -16,12 +16,27 @@ var config = require('./config'),
     string_decoder = require('string_decoder'),
     decoder = new string_decoder.StringDecoder('utf8'),
     querystring = require('querystring'),
-    router = require('./router');
+    router = require('./router'),
+    cluster = require('cluster'),
+    numCPUs = require('os').cpus().length;
 
-http.createServer(function (req, res) {
-    var reqObj = util.parse_request(req);
+if (cluster.isMaster) {
+    // fork workers
+    for (var i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
+    cluster.on('exit', function (worker, code, signal) {
+        console.log('worker' + worker.process.pid + ' died');
+    });
+    console.log('listening: http://l27.0.0.1:' + config.server_config.SERVER_PORT);
+} else {
+    http.createServer(function (req, res) {
+        var reqObj = util.parse_request(req);
 
-    // new version with router
-    router.handle(reqObj, req, res);
-}).listen(config.server_config.SERVER_PORT);
-console.log('listening: http://l27.0.0.1:' + config.server_config.SERVER_PORT);
+        // new version with router
+        router.handle(reqObj, req, res);
+    }).listen(config.server_config.SERVER_PORT);
+}
+
+
+
