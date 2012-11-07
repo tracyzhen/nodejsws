@@ -123,10 +123,7 @@ function parsePath(urlObj) {
 exports.parsePath = parsePath;
 
 exports.parse_request = function (req) {
-    var urlObj = urllib.parse(req.url);
-    var requestMethod = req.method;
-    var headers = req.headers;
-    var pathObj = parsePath(urlObj);
+    var pathObj = parsePath(urllib.parse(req.headers['FULL_PATH']));
     var type = 'php';
     if (endsWith(pathObj.realPath.toLowerCase(), '.php')) {
         type = 'php';
@@ -136,16 +133,10 @@ exports.parse_request = function (req) {
     } else {
         type = 'binary';
     }
-    return {
-        type:type,
-        url:urlObj,
-        request_method:requestMethod,
-        headers:headers,
-        query_string:urlObj.query == undefined ? '' : urlObj.query,
-        pathname:urlObj.pathname,
-        real_path:pathObj.realPath,
-        path_info:pathObj.pathInfo,
-        req_path:config.server_config.ROOT_DIR + pathObj.realPath
-    };
+    req.type = type;
+    req.request_path = config.server_config.ROOT_DIR + pathObj.realPath;
+    req.path_info = pathObj.pathInfo;
+    req.real_path = pathObj.realPath;
+    return req;
 };
 

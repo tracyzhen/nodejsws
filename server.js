@@ -8,7 +8,7 @@
 
 var config = require('./config'),
     util = require('./util'),
-    http = require('http'),
+    zhttp = require('./zhttp'),
     fs = require('fs'),
     child_process = require('child_process'),
     process_pool = require('./process_pool'),
@@ -30,11 +30,9 @@ if (cluster.isMaster) {
     });
     console.log('listening: http://l27.0.0.1:' + config.server_config.SERVER_PORT);
 } else {
-    http.createServer(function (req, res) {
-        var reqObj = util.parse_request(req);
-
-        // new version with router
-        router.handle(reqObj, req, res);
+    zhttp.createServer(function (req, res) {
+        req = util.parse_request(req);
+        router.handle(req, res);
     }).listen(config.server_config.SERVER_PORT);
 }
 

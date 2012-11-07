@@ -2,55 +2,48 @@ var fs = require('fs'),
     util = require('./util'),
     nws_http = require('./nws_http');
 
-exports.handle = function (reqObj, req, res) {
-    switch (reqObj.type) {
+exports.handle = function (req, res) {
+    switch (req.type) {
         case 'php':
-            handlePHP(reqObj, req, res);
+            handlePHP(req, res);
             break;
         case 'plain':
-            handlePlain(reqObj, res);
+            handlePlain(req, res);
             break;
         case 'binary':
-            handleBinary(reqObj, res);
+            handleBinary(req, res);
             break;
         default:
-            handlerError(reqObj, res);
+            handlerError(req, res);
     }
 };
 
-function handleBinary(reqObj, res) {
+function handleBinary(req, res) {
     res.setHeader('Content-Type', 'binary');
     try {
-        res.write(fs.readFileSync(reqObj.req_path));
+        res.write(fs.readFileSync(req.request_path));
     } catch (e) {
-        console.log(reqObj);
+        console.log(req);
         console.log(e);
     }
     res.end();
 }
 
-function handlePlain(reqObj, res) {
+function handlePlain(req, res) {
     try {
-        res.write(fs.readFileSync(reqObj.req_path));
+        res.write(fs.readFileSync(req.request_path));
     } catch (e) {
-        console.log(reqObj);
+        console.log(req);
         console.log(e);
     }
     res.end();
 }
 
-function handlePHP(reqObj, req, res) {
-    if (reqObj.request_method == 'GET') {
-        nws_http.get(null, nws_http.result_handler, req, reqObj, res);
-    } else {
-        req.on('data', function (data) {
-            var post_data = data;
-            nws_http.post(null, post_data, nws_http.result_handler, req, reqObj, res);
-        });
-    }
+function handlePHP(req, res) {
+    nws_http.processRequest(null, nws_http.result_handler, req, res);
 }
 
-function handlerError(reqObj, res) {
+function handlerError(req, res) {
     console.log('Error hanpened.\n');
-    console.log(reqObj);
+    console.log(req);
 }

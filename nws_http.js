@@ -4,90 +4,45 @@ var fs = require('fs'),
     querystring = require('querystring'),
     config = require('./config');
 
-exports.post = function (process, post_data, result_handle, req, reqObj, res) {
+exports.processRequest = function (process, result_handle, req, res) {
     var env = {
-        REDIRECT_STATUS: 200, // or true, or other, such as 30x
-        REQUEST_METHOD: 'POST',
-        SCRIPT_FILENAME: reqObj.req_path,
-        GATEWAY_INTERFACE: 'CGI/1.1',
-        CONTENT_LENGTH: req.headers['content-length'], // post_data.length,
-        CONTENT_TYPE: req.headers['content-type'], // 'application/x-www-form-urlencoded',
-        SERVER_NAME: config.server_config.SERVER_NAME,
-        SERVER_PORT: config.server_config.SERVER_PORT,
-        QUERY_STRING: reqObj.query_string,
-        SERVER_SOFTWARE: 'nodejsws/0.01',
-        SCRIPT_NAME: 'php-cgi',
-        REQUEST_URI: reqObj.url.path,
+        REDIRECT_STATUS:200, // or true, or other, such as 30x
+        REQUEST_METHOD:req.headers['HTTP_METHOD'],
+        SCRIPT_FILENAME:req.request_path,
+        GATEWAY_INTERFACE:'CGI/1.1',
+        CONTENT_LENGTH:req.content.length,
+        CONTENT_TYPE:req.headers['Content-Type'] || 'text/plain',
+        SERVER_NAME:config.server_config.SERVER_NAME,
+        QUERY_STRING:querystring.stringify(req.headers['QUERY_STRING']),
+        SERVER_SOFTWARE:'nodejsws/0.01',
+        SCRIPT_NAME:'php-cgi',
+        REQUEST_URI:req.headers['FULL_PATH'],
 //        DOCUMENT_URI: '',
-        DOCUMENT_ROOT: config.server_config.ROOT_DIR,
-//        SERVER_PROTOCOL: '',
-        REMOTE_ADDR: '', // client ip
-        REMOTE_PORT: '', // client port
-        SERVER_ADDR: config.server_config.SERVER_ADDR, // server ip
-        HTTPS: '',
-        HTTP_REFERER: req.headers.referer,
-        HTTP_ACCEPT_ENCODING: req.headers['accept-encoding'],
-        HTTP_ACCEPT_LANGUAGE: req.headers['accept-language'],
-        HTTP_ACCEPT_CHARSET: req.headers['charset'] || 'utf8',
-        COOKIE: req.headers['cookie'],
-        HTTP_ACCEPT: req.headers['accept'],
-        HTTP_USER_AGENT: req.headers['user-agent'],
-        ORIGIN: req.headers.origin,
-        CACHE_CONTROL: req.headers['cache_control'],
-        HTTP_CONNECTION: req.headers['connection'],
-        HTTP_HOST: req.headers.host,
-        PATH_INFO: reqObj.path_info,
-        PHP_SELF: reqObj.req_path
+        DOCUMENT_ROOT:config.server_config.ROOT_DIR,
+        SERVER_PROTOCOL:'HTTP/1.0',
+        REMOTE_ADDR:'', // client ip
+        REMOTE_PORT:'', // client port
+        SERVER_ADDR:config.server_config.SERVER_ADDR, // server ip
+        SERVER_PORT:config.server_config.SERVER_PORT, // server port
+        HTTPS:'',
+        HTTP_REFERER:req.headers['REFERER'] || '',
+        HTTP_ACCEPT_ENCODING:req.headers['Accept-Encoding'],
+        HTTP_ACCEPT_LANGUAGE:req.headers['Accept-Language'],
+        HTTP_ACCEPT_CHARSET:req.headers['Accept-Charset'] || 'utf8',
+        COOKIE:req.headers['Cookie'],
+        HTTP_ACCEPT:req.headers['Accept'],
+        HTTP_USER_AGENT:req.headers['User-Agent'],
+        ORIGIN:req.headers['Origin'] || '',
+        CACHE_CONTROL:req.headers['Cache-Control'] || 'no-cache',
+        HTTP_CONNECTION:req.headers['Connection'],
+        HTTP_HOST:req.headers['Host'],
+        PATH_INFO:req.headers['HTTP_PATH'],
+        PHP_SELF:req.request_path
     };
     var process = child_process.spawn('php-cgi', [], {
-        env: env
+        env:env
     });
-    process.stdin.write(post_data);
-    process.stdin.end();
-    process.stdout.setEncoding('utf8');
-    process.stdout.on('data', function (data) {
-        result_handle(null, data, res);
-    });
-};
-exports.get = function (process, result_handle, req, reqObj, res) {
-    var env = {
-        REDIRECT_STATUS: true,
-        REQUEST_METHOD: 'GET',
-        SCRIPT_FILENAME: reqObj.req_path,
-        GATEWAY_INTERFACE: 'CGI/1.1',
-        CONTENT_LENGTH: 0,
-        CONTENT_TYPE: 'text/plain',
-        SERVER_NAME: config.server_config.SERVER_NAME,
-        QUERY_STRING: reqObj.query_string,
-        SERVER_SOFTWARE: 'nodejsws/0.01',
-        SCRIPT_NAME: 'php-cgi',
-        REQUEST_URI: reqObj.url.path,
-//        DOCUMENT_URI: '',
-        DOCUMENT_ROOT: config.server_config.ROOT_DIR,
-        SERVER_PROTOCOL: 'http/1.0',
-        REMOTE_ADDR: '', // client ip
-        REMOTE_PORT: '', // client port
-        SERVER_ADDR: config.server_config.SERVER_ADDR, // server ip
-        SERVER_PORT: config.server_config.SERVER_PORT, // server port
-        HTTPS: '',
-        HTTP_REFERER: req.headers.referer,
-        HTTP_ACCEPT_ENCODING: req.headers['accept-encoding'],
-        HTTP_ACCEPT_LANGUAGE: req.headers['accept-language'],
-        HTTP_ACCEPT_CHARSET: req.headers['charset'] || 'utf8',
-        COOKIE: req.headers['cookie'],
-        HTTP_ACCEPT: req.headers['accept'],
-        HTTP_USER_AGENT: req.headers['user-agent'],
-        ORIGIN: req.headers.origin,
-//        CACHE_CONTROL: req.headers['cache_control'],
-        HTTP_CONNECTION: req.headers['connection'],
-        HTTP_HOST: req.headers.host,
-        PATH_INFO: reqObj.path_info,
-        PHP_SELF: reqObj.req_path
-    };
-    var process = child_process.spawn('php-cgi', [], {
-        env: env
-    });
-    process.stdin.write('');
+    process.stdin.write(req.content);
     process.stdin.end();
     process.stdout.setEncoding('utf8');
     process.stdout.on('data', function (data) {
@@ -95,6 +50,12 @@ exports.get = function (process, result_handle, req, reqObj, res) {
     });
 };
 
+/**
+ * TODO: a bug here or somewhere else, making the socket not writable
+ * @param err
+ * @param data
+ * @param res
+ */
 var result_handler = function (err, data, res) { // function to handle the result the php-cgi output
     var headers = {};
     var ps = util.splitResponse(data);
@@ -110,7 +71,7 @@ var result_handler = function (err, data, res) { // function to handle the resul
             break;
         }
     }
-    res.writeHead(headers.Status != undefined ? parseInt(headers['Status'].substr(0, 3)) : 200,
+    res.writeHead(headers.Status !== undefined ? parseInt(headers['Status'].substr(0, 3)) : 200,
         headers); // 30x redirect, 200 common
     res.write(content);
     res.end();
